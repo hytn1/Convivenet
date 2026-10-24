@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Projeto_Faculdade.Views.PerfilPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F7F5FF">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- CABEÇALHO -->
+        <Border
+            Grid.Row="0"
+            BackgroundColor="#F0EDFF"
+            Stroke="#DDD6FE"
+            StrokeThickness="1"
+            Padding="15,10">
+
+            <Grid ColumnDefinitions="Auto,*">
+
+                <Button
+                    Text="‹"
+                    FontSize="32"
+                    TextColor="#6D28D9"
+                    BackgroundColor="Transparent"
+                    WidthRequest="50"
+                    HeightRequest="45"
+                    Clicked="VoltarClicked" />
+
+                <Label
+                    Grid.Column="1"
+                    Text="Meu Perfil - ConvivêNET"
+                    FontSize="21"
+                    FontAttributes="Bold"
+                    TextColor="#222052"
+                    VerticalOptions="Center" />
+
+            </Grid>
+
+        </Border>
+
+
+        <!-- CONTEÚDO -->
+        <ScrollView Grid.Row="1">
+
+            <VerticalStackLayout
+                Padding="25,25,25,35"
+                Spacing="18">
+
+
+                <!-- APRESENTAÇÃO -->
+
+                <Label
+                    Text="Esse sou eu!"
+                    FontSize="27"
+                    FontAttributes="Bold"
+                    TextColor="#222052"
+                    HorizontalTextAlignment="Center" />
+
+                <Label
+                    Text="Personalize seu perfil e acompanhe sua jornada."
+                    FontSize="15"
+                    TextColor="#5146E5"
+                    HorizontalTextAlignment="Center" />
+
+
+                <!-- FOTO -->
+
+
+                <Border
+                    WidthRequest="155"
+                    HeightRequest="155"
+                    BackgroundColor="#FFF4C7"
+                    Stroke="#D97706"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 80"
+                    HorizontalOptions="Center"
+                    Margin="0,5,0,0"
+                    Padding="0">
+
+                    <Image
+                        x:Name="FotoPerfilImage"
+                        WidthRequest="147"
+                        HeightRequest="147"
+                        Aspect="AspectFill"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+
+                </Border>
+
+
+                <!-- BOTÃO FOTO -->
+
+                <Button
+                    Text="Escolher minha foto"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#8B5CF6"
+                    CornerRadius="16"
+                    HeightRequest="50"
+                    WidthRequest="230"
+                    HorizontalOptions="Center"
+                    Clicked="AdicionarFotoClicked" />
+
+
+                <!-- NOME -->
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#8B5CF6"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="18">
+
+                    <VerticalStackLayout Spacing="4">
+
+                        <Label
+                            Text="Meu nome"
+                            FontSize="14"
+                            TextColor="#71717A" />
+
+                        <Label
+                            x:Name="NomeUsuarioLabel"
+                            Text="Usuário"
+                            FontSize="23"
+                            FontAttributes="Bold"
+                            TextColor="#222052" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+
+                <!-- INFORMAÇÕES -->
+
+                <Label
+                    Text="Minha jornada"
+                    FontSize="21"
+                    FontAttributes="Bold"
+                    TextColor="#222052"
+                    Margin="0,5,0,0" />
+
+
+                <Grid
+                    ColumnDefinitions="*,*"
+                    ColumnSpacing="15">
+
+
+                    <!-- PONTOS -->
+
+                    <Border
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        Stroke="#129E91"
+                        StrokeThickness="3"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="18">
+
+                        <VerticalStackLayout Spacing="5">
+
+                            <Label
+                                Text="Pontos"
+                                FontSize="14"
+                                TextColor="#71717A" />
+
+                            <Label
+                                x:Name="PontosLabel"
+                                Text="0"
+                                FontSize="29"
+                                FontAttributes="Bold"
+                                TextColor="#129E91" />
+
+                            <Label
+                                Text="pontos"
+                                FontSize="13"
+                                TextColor="#129E91" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+
+                    <!-- NÍVEL -->
+
+                    <Border
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        Stroke="#FF3F64"
+                        StrokeThickness="3"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="18">
+
+                        <VerticalStackLayout Spacing="5">
+
+                            <Label
+                                Text="Nível"
+                                FontSize="14"
+                                TextColor="#71717A" />
+
+                            <Label
+                                x:Name="NivelLabel"
+                                Text="1"
+                                FontSize="29"
+                                FontAttributes="Bold"
+                                TextColor="#FF3F64" />
+
+                            <Label
+                                Text="iniciante"
+                                FontSize="13"
+                                TextColor="#FF3F64" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </Grid>
+
+
+                <!-- PROGRESSO -->
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#DDD6FE"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="18">   
+
+                    <VerticalStackLayout Spacing="12">
+
+                        <Grid ColumnDefinitions="*,Auto">
+
+                            <Label
+                                Text="Seu progresso"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#222052" />      
+
+                            <Label
+                                x:Name="ProgressoModulosLabel"
+                                Grid.Column="1"
+                                Text="0 de 5 módulos"
+                                FontSize="14"
+                                TextColor="#6D28D9"
+                                VerticalOptions="Center" />
+
+                        </Grid>
+
+                        <ProgressBar
+                            x:Name="ProgressoBar"
+                            Progress="0"
+                            ProgressColor="#8B5CF6"
+                            BackgroundColor="#EDE9FE"
+                            HeightRequest="12" />
+
+                        <Label
+                            x:Name="MensagemProgressoLabel"
+                            Text="Comece sua jornada e descubra os módulos!"
+                            FontSize="13"
+                            TextColor="#71717A"
+                            LineBreakMode="WordWrap" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+
+                <!-- BETO -->
+
+                <Border
+                    BackgroundColor="#F0EDFF"
+                    Stroke="#8B5CF6"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="15">
+
+                    <Grid
+                        ColumnDefinitions="75,*"
+                        ColumnSpacing="15">
+
+                        <Border
+                            WidthRequest="65"
+                            HeightRequest="65"
+                            BackgroundColor="#FFF4C7"
+                            Stroke="#D97706"
+                            StrokeThickness="2"
+                            StrokeShape="RoundRectangle 35">
+
+                            <Image
+                                Source="logo.png"
+                                WidthRequest="55"
+                                HeightRequest="55"
+                                Aspect="AspectFit" />
+
+                        </Border>
+
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            Spacing="3">
+
+                            <Label
+                                Text="Beto diz:"
+                                FontSize="15"
+                                FontAttributes="Bold"
+                                TextColor="#6D28D9" />
+
+                            <Label
+                                Text="Cada atitude conta! Vamos continuar aprendendo juntos."
+                                FontSize="14"
+                                TextColor="#222052"
+                                LineBreakMode="WordWrap" />
+
+                        </VerticalStackLayout>
+
+                    </Grid>
+
+                </Border>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

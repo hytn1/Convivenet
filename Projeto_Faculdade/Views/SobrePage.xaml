@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Projeto_Faculdade.Views.SobrePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F7F5FF">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- CABEÇALHO -->
+        <Border
+            Grid.Row="0"
+            BackgroundColor="#F0EDFF"
+            Stroke="#DDD6FE"
+            StrokeThickness="1"
+            Padding="20,14">
+
+            <HorizontalStackLayout Spacing="12">
+                <Border
+                    WidthRequest="46"
+                    HeightRequest="46"
+                    BackgroundColor="#8B5CF6"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 14"
+                    VerticalOptions="Center">
+
+                    <Image
+                        Source="logo.png"
+                        WidthRequest="36"
+                        HeightRequest="36"
+                        Aspect="AspectFit"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center" />
+                </Border>
+
+                <VerticalStackLayout
+                    VerticalOptions="Center"
+                    Spacing="2">
+
+                    <Label
+                        Text="ConvivêNET"
+                        FontSize="21"
+                        FontAttributes="Bold"
+                        TextColor="#222052" />
+
+                    <Label
+                        Text="Conheça nosso projeto"
+                        FontSize="13"
+                        TextColor="#6D28D9" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+        </Border>
+
+        <!-- CONTEÚDO -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout
+                Padding="22,22,22,28"
+                Spacing="16">
+
+                <!-- APRESENTAÇÃO -->
+                <Border
+                    BackgroundColor="#8B5CF6"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 24"
+                    Padding="22">
+
+                    <VerticalStackLayout Spacing="12">
+
+                        <Label
+                            Text="SOBRE O ConvivêNET"
+                            FontSize="12"
+                            FontAttributes="Bold"
+                            TextColor="#EDE9FE"
+                            CharacterSpacing="1.5" />
+
+                        <Label
+                            Text="Aprender a conviver também é uma aventura!"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            LineBreakMode="WordWrap" />
+
+                        <Label
+                            Text="O ConvivêNET é um projeto educativo e interativo que ajuda crianças a compreender a importância do respeito, da empatia e das boas atitudes no dia a dia."
+                            FontSize="15"
+                            TextColor="White"
+                            LineHeight="1.3"
+                            LineBreakMode="WordWrap" />
+
+                        <Border
+                            BackgroundColor="#F0EDFF"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"
+                            Padding="14">
+
+                            <Label
+                                Text="Pequenas atitudes podem fazer uma grande diferença na vida de alguém."
+                                FontSize="15"
+                                FontAttributes="Bold"
+                                TextColor="#5146E5"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="WordWrap" />
+                        </Border>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- O QUE É -->
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#DDD6FE"
+                    StrokeThickness="1.5"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="20">
+
+                    <VerticalStackLayout Spacing="10">
+                        <Label
+                            Text="O que é o ConvivêNET?"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#222052" />
+
+                        <Label
+                            Text="A convivência faz parte da escola, da família e de todos os lugares onde nos relacionamos com outras pessoas. Por isso, o app propõe atividades que ajudam a reconhecer atitudes positivas, compreender os sentimentos dos outros e refletir sobre as consequências das nossas escolhas."
+                            FontSize="15"
+                            TextColor="#5146E5"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.3" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- COMO FUNCIONA -->
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#129E91"
+                    StrokeThickness="1.5"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="20">
+
+                    <VerticalStackLayout Spacing="12">
+                        <Label
+                            Text="Como funciona?"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#222052" />
+
+                        <Label
+                            Text="O usuário pode explorar módulos de aprendizagem, analisar situações do cotidiano e responder perguntas sobre como agir em diferentes momentos."
+                            FontSize="15"
+                            TextColor="#5146E5"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.3" />
+
+                        <BoxView
+                            HeightRequest="1"
+                            Color="#E5E7EB" />
+
+                        <Label
+                            Text="Durante essa jornada, é possível:"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            TextColor="#222052" />
+
+                        <Label
+                            Text="• Aprender por meio de módulos educativos."
+                            FontSize="14"
+                            TextColor="#5146E5" />
+
+                        <Label
+                            Text="• Refletir sobre situações e escolher atitudes."
+                            FontSize="14"
+                            TextColor="#5146E5" />
+
+                        <Label
+                            Text="• Acompanhar o progresso e conquistar pontos."
+                            FontSize="14"
+                            TextColor="#5146E5" />
+
+                        <Label
+                            Text="• Desenvolver conhecimentos sobre respeito e convivência."
+                            FontSize="14"
+                            TextColor="#5146E5"
+                            LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- TEMAS -->
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#FF3F64"
+                    StrokeThickness="1.5"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="20">
+
+                    <VerticalStackLayout Spacing="12">
+                        <Label
+                            Text="O que vamos aprender?"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#222052" />
+
+                        <Label
+                            Text="O ConvivêNET aborda temas importantes para construir relações mais saudáveis:"
+                            FontSize="15"
+                            TextColor="#5146E5"
+                            LineBreakMode="WordWrap" />
+
+                        <Border
+                            BackgroundColor="#F3E8FF"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"
+                            Padding="13">
+                            <VerticalStackLayout Spacing="4">
+                                <Label
+                                    Text="Bullying e suas consequências"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    TextColor="#6D28D9" />
+                                <Label
+                                    Text="Reconhecer atitudes que machucam, excluem ou humilham outras pessoas."
+                                    FontSize="14"
+                                    TextColor="#5146E5"
+                                    LineBreakMode="WordWrap" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border
+                            BackgroundColor="#CCFBF1"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"
+                            Padding="13">
+                            <VerticalStackLayout Spacing="4">
+                                <Label
+                                    Text="Empatia e respeito"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    TextColor="#0F766E" />
+                                <Label
+                                    Text="Aprender a considerar os sentimentos, as diferenças e os limites de cada pessoa."
+                                    FontSize="14"
+                                    TextColor="#115E59"
+                                    LineBreakMode="WordWrap" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border
+                            BackgroundColor="#FFE4E6"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"
+                            Padding="13">
+                            <VerticalStackLayout Spacing="4">
+                                <Label
+                                    Text="Amizade e inclusão"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    TextColor="#BE123C" />
+                                <Label
+                                    Text="Valorizar a cooperação, acolher os colegas e evitar deixar alguém de fora."
+                                    FontSize="14"
+                                    TextColor="#9F1239"
+                                    LineBreakMode="WordWrap" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border
+                            BackgroundColor="#FEF3C7"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"
+                            Padding="13">
+                            <VerticalStackLayout Spacing="4">
+                                <Label
+                                    Text="Conflitos e pedido de ajuda"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    TextColor="#92400E" />
+                                <Label
+                                    Text="Buscar soluções por meio do diálogo e procurar um adulto de confiança quando necessário."
+                                    FontSize="14"
+                                    TextColor="#78350F"
+                                    LineBreakMode="WordWrap" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- OBJETIVO -->
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#D97706"
+                    StrokeThickness="1.5"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="20">
+
+                    <VerticalStackLayout Spacing="10">
+                        <Label
+                            Text="Nosso objetivo"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#222052" />
+
+                        <Label
+                            Text="Nosso objetivo é incentivar crianças a refletirem sobre suas atitudes e entenderem que cada pessoa merece ser tratada com dignidade. Queremos contribuir para ambientes mais acolhedores, seguros e respeitosos, nos quais as diferenças sejam valorizadas e os conflitos possam ser enfrentados com diálogo."
+                            FontSize="15"
+                            TextColor="#5146E5"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.3" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- BETO -->
+                <Border
+                    BackgroundColor="#FFF4C7"
+                    Stroke="#F5C451"
+                    StrokeThickness="1.5"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="18">
+
+                    <Grid
+                        ColumnDefinitions="82,*"
+                        ColumnSpacing="14">
+
+                        <Border
+                            WidthRequest="76"
+                            HeightRequest="76"
+                            BackgroundColor="White"
+                            Stroke="#F5C451"
+                            StrokeThickness="2"
+                            StrokeShape="RoundRectangle 20"
+                            VerticalOptions="Center">
+
+                            <Image
+                                Source="logo.png"
+                                WidthRequest="64"
+                                HeightRequest="64"
+                                Aspect="AspectFit"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center" />
+                        </Border>
+
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            Spacing="6">
+
+                            <Label
+                                Text="Este é o Beto!"
+                                FontSize="19"
+                                FontAttributes="Bold"
+                                TextColor="#92400E" />
+
+                            <Label
+                                Text="Ele acompanha você nessa jornada de aprendizado. Vamos descobrir juntos como pequenas atitudes podem tornar a convivência melhor para todos?"
+                                FontSize="14"
+                                TextColor="#78350F"
+                                LineBreakMode="WordWrap" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
+                <!-- MENSAGEM FINAL -->
+                <Label
+                    Text="Respeitar, acolher e cooperar: juntos podemos fazer a diferença!"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    TextColor="#5146E5"
+                    HorizontalTextAlignment="Center"
+                    Margin="8,4,8,0"
+                    LineBreakMode="WordWrap" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- NAVEGAÇÃO INFERIOR -->
+        <Border
+            Grid.Row="2"
+            BackgroundColor="White"
+            Stroke="#DDD6FE"
+            StrokeThickness="1.5"
+            StrokeShape="RoundRectangle 22"
+            Margin="20,5,20,16"
+            Padding="8">
+
+            <Grid ColumnDefinitions="*,*,*">
+
+                <Button
+                    Grid.Column="0"
+                    Text="Início"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    TextColor="#5146E5"
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    Clicked="OnInicioClicked" />
+
+                <Button
+                    Grid.Column="1"
+                    Text="Atividades"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    TextColor="#5146E5"
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    Clicked="OnAtividadesClicked" />
+
+                <Button
+                    Grid.Column="2"
+                    Text="Sobre"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    TextColor="#6D28D9"
+                    BackgroundColor="#EDE9FE"
+                    CornerRadius="16"
+                    HeightRequest="48" />
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</ContentPage>

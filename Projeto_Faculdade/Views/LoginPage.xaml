@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Projeto_Faculdade.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F7F5FF">
+
+    <Grid RowDefinitions="Auto,*">
+
+        
+        <Border
+            Grid.Row="0"
+            BackgroundColor="#F0EDFF"
+            Stroke="#DDD6FE"
+            StrokeThickness="1"
+            Padding="20,12">
+
+            <HorizontalStackLayout Spacing="12">
+
+                <Border
+                    WidthRequest="42"
+                    HeightRequest="42"
+                    BackgroundColor="#8B5CF6"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 10">
+
+                    <Image
+                        Source="logo.png"
+                        WidthRequest="30"
+                        HeightRequest="30"
+                        Aspect="AspectFit" />
+
+                </Border>
+
+                <Label
+                    Text="CONVIVNET"
+                    FontSize="21"
+                    FontAttributes="Bold"
+                    TextColor="#222052"
+                    VerticalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+        </Border>
+
+
+      
+        <ScrollView Grid.Row="1">
+
+            <VerticalStackLayout
+                Spacing="16"
+                Padding="25,28,25,35"
+                HorizontalOptions="Center">
+
+
+               
+
+                <Label
+                    Text="Bem-vindo ao ConvivêNET!"
+                    FontSize="40"
+                    FontAttributes="Bold"
+                    TextColor="#6D28D9"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center" />
+
+                <Label
+                    Text="Um espaço para aprender, respeitar e conviver melhor."
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    TextColor="#5146E5"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10" />
+
+
+                
+
+                <Border
+                    WidthRequest="430"
+                    BackgroundColor="White"
+                    Stroke="#DDD6FE"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 28"
+                    Padding="20"
+                    HorizontalOptions="Center">
+
+                    <VerticalStackLayout
+                        Spacing="9"
+                        HorizontalOptions="Center">
+
+                        <Border
+                            WidthRequest="120"
+                            HeightRequest="120"
+                            BackgroundColor="#FFF4C7"
+                            Stroke="#D97706"
+                            StrokeThickness="4"
+                            StrokeShape="RoundRectangle 60"
+                            HorizontalOptions="Center">
+
+                            <Image
+                                Source="logo.png"
+                                WidthRequest="100"
+                                HeightRequest="100"
+                                Aspect="AspectFit"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center" />
+
+                        </Border>
+
+                        <Label
+                            Text="Olá! Eu sou o Beto!"
+                            FontSize="23"
+                            FontAttributes="Bold"
+                            TextColor="#222052"
+                            HorizontalTextAlignment="Center" />
+
+                        <Label
+                            Text="Vamos aprender juntos sobre respeito, empatia e boa convivência."
+                            FontSize="16"
+                            TextColor="#5146E5"
+                            HorizontalTextAlignment="Center" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+
+             
+
+                <VerticalStackLayout
+                    WidthRequest="500"
+                    Spacing="7"
+                    Margin="0,5,0,0">
+
+                    <Label
+                        Text="Seu nome"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#222052" />
+
+                    <Border
+                        BackgroundColor="White"
+                        Stroke="#8B5CF6"
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 16"
+                        Padding="12,0">
+
+                        <Entry
+                            x:Name="NomeEntry"
+                            Placeholder="Digite seu nome..."
+                            FontSize="17"
+                            TextColor="#222052"
+                            PlaceholderColor="#A1A1AA"
+                            HeightRequest="55" />
+
+                    </Border>
+
+                </VerticalStackLayout>
+
+
+               
+
+                <VerticalStackLayout
+                    WidthRequest="500"
+                    Spacing="7">
+
+                    <Label
+                        Text="Sua senha"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#222052" />
+
+                    <Border
+                        BackgroundColor="White"
+                        Stroke="#8B5CF6"
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 16"
+                        Padding="12,0">
+
+                        <Entry
+                            x:Name="SenhaEntry"
+                            Placeholder="Digite sua senha..."
+                            FontSize="17"
+                            TextColor="#222052"
+                            PlaceholderColor="#A1A1AA"
+                            IsPassword="True"
+                            HeightRequest="55" />
+
+                    </Border>
+
+                </VerticalStackLayout>
+
+
+                
+
+                <Button
+                    x:Name="EntrarButton"
+                    WidthRequest="500"
+                    Text="Entrar"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#129E91"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    Margin="0,4,0,0"
+                    Clicked="EntrarButton_Clicked" />
+
+
+               
+
+                <Label
+                    Text="Ainda não possui uma conta?"
+                    FontSize="14"
+                    TextColor="#71717A"
+                    HorizontalTextAlignment="Center"
+                    Margin="0,3,0,0" />
+
+                <Button
+                    Text="Criar minha conta"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    TextColor="#6D28D9"
+                    BackgroundColor="Transparent"
+                    HeightRequest="40"
+                    Clicked="CriarConta_Clicked" />
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

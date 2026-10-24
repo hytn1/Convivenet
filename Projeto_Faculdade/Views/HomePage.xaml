@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Projeto_Faculdade.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F7F5FF">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- CABEÇALHO -->
+        <Border
+            Grid.Row="0"
+            BackgroundColor="#F0EDFF"
+            Stroke="#DDD6FE"
+            StrokeThickness="1"
+            Padding="20,12">
+
+            <HorizontalStackLayout Spacing="12">
+
+                <Border
+                    WidthRequest="42"
+                    HeightRequest="42"
+                    BackgroundColor="#8B5CF6"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 10">
+
+                    <Image
+                        Source="logo.png"
+                        WidthRequest="30"
+                        HeightRequest="30"
+                        Aspect="AspectFit" />
+
+                </Border>
+
+                <Label
+                    Text="Início - ConvivêNET"
+                    FontSize="21"
+                    FontAttributes="Bold"
+                    TextColor="#222052"
+                    VerticalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+        </Border>
+
+
+        <!-- CONTEÚDO -->
+        <ScrollView Grid.Row="1">
+
+            <VerticalStackLayout
+                Padding="30,25,30,25"
+                Spacing="18">
+
+                <!-- PERFIL -->
+
+                <Grid
+                    ColumnDefinitions="*,Auto"
+                    ColumnSpacing="30">
+
+                    <HorizontalStackLayout
+                        Grid.Column="0"
+                        Spacing="15">
+
+                        <Border
+                            WidthRequest="58"
+                            HeightRequest="58"
+                            BackgroundColor="#FF3F64"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 30"
+                            HorizontalOptions="Start">
+
+                            <Grid>
+                                <Image
+                                    x:Name="FotoUsuarioImage"
+                                    WidthRequest="58"
+                                    HeightRequest="58"
+                                    Aspect="AspectFill"
+                                    IsVisible="False" />
+
+                                <Label
+                                    x:Name="InicialLabel"
+                                    Text="U"
+                                    FontSize="23"
+                                    FontAttributes="Bold"
+                                    TextColor="White"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center" />
+                            </Grid>
+
+                        </Border>
+
+                        <VerticalStackLayout
+                            Spacing="2"
+                            VerticalOptions="Center">
+
+                            <Label
+                                x:Name="NomeUsuarioLabel"
+                                Text="Olá!"
+                                FontSize="24"
+                                FontAttributes="Bold"
+                                TextColor="#222052" />
+
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+
+                </Grid>
+
+
+                
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#8B5CF6"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="18">
+
+                    <Grid
+                        ColumnDefinitions="90,*"
+                        ColumnSpacing="18">
+
+                        <Border
+                            WidthRequest="75"
+                            HeightRequest="75"
+                            BackgroundColor="#FFF4C7"
+                            Stroke="#D97706"
+                            StrokeThickness="3"
+                            StrokeShape="RoundRectangle 40"
+                            VerticalOptions="Center">
+
+                            <Image
+                                Source="logo.png"
+                                WidthRequest="62"
+                                HeightRequest="62"
+                                Aspect="AspectFit" />
+
+                        </Border>
+
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            Spacing="4">
+
+                            <Label
+                                Text="Beto diz:"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#6D28D9" />
+
+                            <Label
+                                Text="Que bom te ver de novo! Vamos aprender mais sobre respeito e convivência nessa jornada!"
+                                FontSize="16"
+                                TextColor="#222052"
+                                LineBreakMode="WordWrap" />
+
+                        </VerticalStackLayout>
+
+                    </Grid>
+
+                </Border>
+
+
+                <!-- ATIVIDADES -->
+
+                <Grid
+                    ColumnDefinitions="*,*"
+                    RowDefinitions="Auto,Auto"
+                    ColumnSpacing="20"
+                    RowSpacing="18">
+
+
+                    <!-- MISSÕES DE CONVIVÊNCIA -->
+
+                    <Border
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        Stroke="#129E91"
+                        StrokeThickness="3"
+                        StrokeShape="RoundRectangle 22"
+                        Padding="20">
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnJogarClicked" />
+                        </Border.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="10">
+
+                            <Border
+                                HorizontalOptions="Start"
+                                BackgroundColor="#D5F7F1"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 20"
+                                Padding="12,6">
+
+                                <Label
+                                    Text="DISPONÍVEL"
+                                    FontSize="12"
+                                    FontAttributes="Bold"
+                                    TextColor="#129E91" />
+
+                            </Border>
+
+                            <Label
+                                Text="Missões de Convivência"
+                                FontSize="19"
+                                FontAttributes="Bold"
+                                TextColor="#222052" />
+
+                            <Label
+                                Text="Responda situações do dia a dia e descubra atitudes que ajudam na boa convivência."
+                                FontSize="15"
+                                TextColor="#5146E5"
+                                LineBreakMode="WordWrap" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+
+                    <!-- PERFIL -->
+
+                    <Border
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        Stroke="#8B5CF6"
+                        StrokeThickness="3"
+                        StrokeShape="RoundRectangle 22"
+                        Padding="20">
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnPerfilClicked" />
+                        </Border.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="10">
+
+                            <Border
+                                HorizontalOptions="Start"
+                                BackgroundColor="#EDE9FE"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 20"
+                                Padding="12,6">
+
+                                <Label
+                                    Text="SEU PERFIL"
+                                    FontSize="12"
+                                    FontAttributes="Bold"
+                                    TextColor="#8B5CF6" />
+
+                            </Border>
+
+                            <Label
+                                Text="Meu Perfil"
+                                FontSize="19"
+                                FontAttributes="Bold"
+                                TextColor="#222052" />
+
+                            <Label
+                                Text="Veja seus pontos, seu nível e as conquistas que você conseguiu desbloquear."
+                                FontSize="15"
+                                TextColor="#5146E5"
+                                LineBreakMode="WordWrap" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                    <Border
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        Stroke="#FF3F64"
+                        StrokeThickness="3"
+                        StrokeShape="RoundRectangle 22"
+                        Padding="20">       
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSobreClicked" />
+                        </Border.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="10">
+
+                            <Label
+                                Text="Como funciona?"
+                                FontSize="19"
+                                FontAttributes="Bold"
+                                TextColor="#222052" />
+
+                            <Label
+                                Text="Entenda como funcionam as atividades, os pontos e as conquistas do projeto."
+                                FontSize="15"
+                                TextColor="#5146E5"
+                                LineBreakMode="WordWrap" />     
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+
+                    <!-- SAIR -->
+
+                    <Border
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        Stroke="#D97706"
+                        StrokeThickness="3"
+                        StrokeShape="RoundRectangle 22"
+                        Padding="20">
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnSairClicked" />
+                        </Border.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="10">
+
+                            <Label
+                                Text="Sair"
+                                FontSize="19"
+                                FontAttributes="Bold"
+                                TextColor="#222052" />
+
+                            <Label
+                                Text="Sair da sua conta."
+                                FontSize="15"
+                                TextColor="#5146E5"
+                                LineBreakMode="WordWrap" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </Grid>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+
+        <!-- MENU INFERIOR -->
+
+        <Border
+            Grid.Row="2"
+            BackgroundColor="White"
+            Stroke="#DDD6FE"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 22"
+            Margin="25,5,25,18"
+            Padding="10">
+
+            <Grid ColumnDefinitions="*,*,*">
+
+                <Button
+                    Grid.Column="0"
+                    Text="Início"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    TextColor="#6D28D9"
+                    BackgroundColor="#EDE9FE"
+                    CornerRadius="20"
+                    HeightRequest="48" />
+
+                <Button
+                    Grid.Column="1"
+                    Text="Atividades"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    TextColor="#5146E5"
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    Clicked="OnJogarClicked" />
+
+                <Button
+                    Grid.Column="3"
+                    Text="Sobre"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    TextColor="#5146E5"
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    Clicked="OnSobreClicked" />
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Projeto_Faculdade.Views.PerguntasPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F7F5FF">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- CABEÇALHO -->
+        <Border
+            Grid.Row="0"
+            BackgroundColor="#F0EDFF"
+            Stroke="#DDD6FE"
+            StrokeThickness="1"
+            Padding="20,12">
+
+            <Grid ColumnDefinitions="Auto,*">
+
+                <Button
+                    Text="‹"
+                    FontSize="32"
+                    TextColor="#6D28D9"
+                    BackgroundColor="Transparent"
+                    WidthRequest="50"
+                    HeightRequest="45"
+                    Clicked="VoltarClicked" />
+
+                <Label
+                    Grid.Column="1"
+                    x:Name="TituloModuloLabel"
+                    Text="Perguntas"
+                    FontSize="21"
+                    FontAttributes="Bold"
+                    TextColor="#222052"
+                    VerticalOptions="Center" />
+
+            </Grid>
+
+        </Border>
+
+
+        <!-- CONTEÚDO -->
+        <ScrollView Grid.Row="1">
+
+            <VerticalStackLayout
+                Padding="25,30,25,40"
+                Spacing="18">
+
+                <!-- TÍTULO -->
+
+                <Label
+                    Text="Agora é sua vez!"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    TextColor="#222052"
+                    HorizontalTextAlignment="Center" />
+
+                <Label
+                    Text="Responda às perguntas sobre o que você acabou de aprender."
+                    FontSize="16"
+                    TextColor="#5146E5"
+                    HorizontalTextAlignment="Center" />
+
+
+                <!-- NÚMERO DA PERGUNTA -->
+
+                <Label
+                    x:Name="PerguntaNumeroLabel"
+                    Text="Pergunta 1 de 2"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    TextColor="#6D28D9"
+                    HorizontalTextAlignment="Center"
+                    Margin="0,5,0,0" />
+
+
+                <!-- PERGUNTA -->
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#8B5CF6"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="20">
+
+                    <VerticalStackLayout
+                        Spacing="18">
+
+                        <Label
+                            x:Name="PerguntaLabel"
+                            Text="A pergunta aparecerá aqui."
+                            FontSize="19"
+                            FontAttributes="Bold"
+                            TextColor="#222052"
+                            LineBreakMode="WordWrap" />
+
+
+                        <!-- ALTERNATIVA A -->
+
+                        <Button
+                            x:Name="AlternativaAButton"
+                            Text="A) Alternativa A"
+                            FontSize="16"
+                            TextColor="#222052"
+                            BackgroundColor="#EDE9FE"
+                            CornerRadius="15"
+                            Padding="15,12"
+                            HorizontalOptions="Fill"
+                            Clicked="AlternativaA_Clicked" />
+
+
+                        <!-- ALTERNATIVA B -->
+
+                        <Button
+                            x:Name="AlternativaBButton"
+                            Text="B) Alternativa B"
+                            FontSize="16"
+                            TextColor="#222052"
+                            BackgroundColor="#EDE9FE"
+                            CornerRadius="15"
+                            Padding="15,12"
+                            HorizontalOptions="Fill"
+                            Clicked="AlternativaB_Clicked" />
+
+
+                        <!-- ALTERNATIVA C -->
+
+                        <Button
+                            x:Name="AlternativaCButton"
+                            Text="C) Alternativa C"
+                            FontSize="16"
+                            TextColor="#222052"
+                            BackgroundColor="#EDE9FE"
+                            CornerRadius="15"
+                            Padding="15,12"
+                            HorizontalOptions="Fill"
+                            Clicked="AlternativaC_Clicked" />
+
+
+                        <!-- ALTERNATIVA D -->
+
+                        <Button
+                            x:Name="AlternativaDButton"
+                            Text="D) Alternativa D"
+                            FontSize="16"
+                            TextColor="#222052"
+                            BackgroundColor="#EDE9FE"
+                            CornerRadius="15"
+                            Padding="15,12"
+                            HorizontalOptions="Fill"
+                            Clicked="AlternativaD_Clicked" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+
+                <!-- RESULTADO DA RESPOSTA -->
+
+                <Label
+                    x:Name="StatusLabel"
+                    Text=""
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    LineBreakMode="WordWrap" />
+
+
+                <!-- BOTÃO PRÓXIMA -->
+
+                <Button
+                    x:Name="ProximaButton"
+                    Text="Próxima pergunta"
+                    FontSize="17"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#129E91"
+                    CornerRadius="16"
+                    HeightRequest="55"
+                    IsVisible="False"
+                    Clicked="ProximaButton_Clicked" />
+
+
+                <!-- VOLTAR -->
+
+                <Button
+                    Text="Voltar"
+                    BackgroundColor="Transparent"
+                    TextColor="#6D28D9"
+                    FontAttributes="Bold"
+                    Clicked="VoltarClicked" />
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>
